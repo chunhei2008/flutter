@@ -7,6 +7,7 @@ import 'package:learn/components/listview.dart';
 import 'package:learn/components/listview_h.dart';
 import 'package:learn/components/listviewbuilder.dart';
 import 'package:learn/components/gridview.dart';
+import 'package:learn/components/form.dart';
 
 void main() => runApp(MyApp());
 
@@ -158,6 +159,15 @@ class _MyHomePageState extends State<MyHomePage> {
                           builder: (context) => new GridViewDemo()));
                 },
                 child: const Text('GridView Demo'),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (context) => new FormDemo()));
+                },
+                child: const Text('Form Demo'),
               ),
             ],
           ),
