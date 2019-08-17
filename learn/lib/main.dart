@@ -4,6 +4,9 @@ import 'package:learn/components/images.dart';
 import 'package:learn/components/text.dart';
 import 'package:learn/components/icon.dart';
 import 'package:learn/components/listview.dart';
+import 'package:learn/components/listview_h.dart';
+import 'package:learn/components/listviewbuilder.dart';
+import 'package:learn/components/gridview.dart';
 
 void main() => runApp(MyApp());
 
@@ -26,6 +29,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: MyHomePage(title: 'Flutter Learn'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -128,8 +132,36 @@ class _MyHomePageState extends State<MyHomePage> {
                 },
                 child: const Text('ListView Demo'),
               ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (context) => new ListViewHDemo()));
+                },
+                child: const Text('ListViewH Demo'),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (context) => new ListViewBuilderDemo()));
+                },
+                child: const Text('ListViewBuilder Demo'),
+              ),
+              RaisedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      new MaterialPageRoute(
+                          builder: (context) => new GridViewDemo()));
+                },
+                child: const Text('GridView Demo'),
+              ),
             ],
           ),
-        ));
+        ),
+    );
   }
 }

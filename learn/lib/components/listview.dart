@@ -16,6 +16,7 @@ class ListViewDemo extends StatelessWidget{
         ),
         body: ListView(
           padding: EdgeInsets.all(10.0),
+          scrollDirection: Axis.vertical,
           children: <Widget>[
             ListTile(
               leading: Icon(Icons.title),
